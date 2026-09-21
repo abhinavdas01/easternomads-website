@@ -1,0 +1,75 @@
+/* Default appearance. Change these tokens, or export overrides from the local editor. */
+:root {
+  --brand: #ff8754;
+  --brand-deep: #ed7241;
+  --on-brand: #12140f;
+  --ink: #f3f0e9;
+  --ink-soft: #b1b3a9;
+  --muted: #94988b;
+  --paper: #0c0e0b;
+  --surface: #171a14;
+  --page-start: #0c0e0b;
+  --page-end: #0c0e0b;
+  --field: #11140e;
+  --hero-text: #ffffff;
+  --hero-shade: #090a09;
+  --shadow-color: #000000;
+  --dark-hover: #000000;
+  --portrait-backdrop: #1b1e17;
+  --hero-overlay-start: 88%;
+  --hero-overlay-middle: 72%;
+  --hero-overlay-end: 22%;
+  --nav-opacity: 82%;
+  --logo-tint: 1;
+  --font-display: "Syne", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --base-font-size: 16px;
+  --gutter-min: 1.5rem;
+  --gutter-max: 5rem;
+  --max: 1280px;
+  --radius: 4px;
+  --nav-radius: 6px;
+  --section-space-min: 4.5rem;
+  --section-space-max: 7rem;
+  --hero-title-min: 2.1rem;
+  --hero-title-max: 4rem;
+  --heading-min: 1.9rem;
+  --heading-max: 3rem;
+  --hero-image: none;
+  --about-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1400&q=80");
+  color-scheme: dark;
+}
+
+/* Recompute derived values at each section, so local accent/text overrides propagate. */
+:root,
+[data-theme-section] {
+  --brand-soft: color-mix(in srgb, var(--brand) 12%, transparent);
+  --line: color-mix(in srgb, var(--ink) 15%, transparent);
+  --space: clamp(var(--gutter-min), 6vw, var(--gutter-max));
+  --section-space: clamp(var(--section-space-min), 10vw, var(--section-space-max));
+  --hero-veil: linear-gradient(115deg,
+    color-mix(in srgb, var(--hero-shade) var(--hero-overlay-start), transparent) 0%,
+    color-mix(in srgb, var(--hero-shade) var(--hero-overlay-middle), transparent) 42%,
+    color-mix(in srgb, var(--hero-shade) 40%, transparent) 72%,
+    color-mix(in srgb, var(--hero-shade) var(--hero-overlay-end), transparent) 100%);
+  --alternate-fill: linear-gradient(180deg,
+    color-mix(in srgb, var(--surface) 55%, transparent),
+    color-mix(in srgb, var(--surface) 20%, transparent));
+}
+
+/* Default raster logos are preserved. Enable tint in the editor to preview new brand colors. */
+.brand-art { position: relative; display: block; flex-shrink: 0; }
+.brand-art img { width: 100%; height: 100%; object-fit: contain; opacity: calc(1 - var(--logo-tint)); }
+.brand-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--brand);
+  mask: var(--brand-art-mask) center / contain no-repeat;
+  -webkit-mask: var(--brand-art-mask) center / contain no-repeat;
+  opacity: var(--logo-tint);
+  pointer-events: none;
+}
+.brand-art--mark { --brand-art-mask: url("/mark.png"); width: 30px; height: 30px; }
+.brand-art--logo { --brand-art-mask: url("/logo.png"); aspect-ratio: 462 / 277; }
+.footer__brand .brand-art--mark { width: 26px; height: 26px; }

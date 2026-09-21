@@ -1,0 +1,24 @@
+.hero__next { white-space: nowrap; }
+.hero__cross { display: inline-block; }
+
+/* Normal document flow; only the ink changes as each line crosses the viewport. */
+.site .story { height: auto; min-height: 0; background: var(--paper); }
+.story__content { padding-block: clamp(100px, 10vw, 160px) 100px; }
+.story .section-marker { margin-bottom: 50px; }
+.site .story__text { max-width: 1120px; margin-inline: auto; padding: 0; text-align: center; font-size: clamp(1.35rem, 4.15vw, 3.9rem); line-height: 2.85; letter-spacing: -.045em; }
+.story__lines { display: block; }
+.story__row { display: block; min-height: 2.85em; }
+.story__word { display: inline-block; white-space: nowrap; }
+
+.story--still .story__row { color: var(--ink); }
+.story--still .story__row--accent { color: var(--brand); }
+.site .story__foot { flex-direction: column; justify-content: center; text-align: center; gap: 18px; margin-top: 40px; }
+.site .story__foot .story__line { width: 64px; }
+.site .story__foot a { margin: 0; }
+@media (max-width: 760px) {
+  .story__content { padding-block: 90px 75px; }
+  .story .section-marker { justify-content: center; margin-bottom: 32px; }
+  .site .story__text { font-size: clamp(1.25rem, 4.85vw, 2.25rem); line-height: 4.8; }
+  .story__row { line-height: 1.6; min-height: 4.8em; padding-block: 1.6em; }
+  .site .story__foot { margin-top: 40px; }
+}
