@@ -1,0 +1,35 @@
+/* Solutions shown as a 3×3 Rubik's cube face; one layer turns at a time. */
+.solution-cube { --gap: 12px; position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: var(--gap); max-width: 860px; margin-inline: auto; padding: var(--gap); background: #050605; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 50px 90px -40px rgb(0 0 0 / 90%), inset 0 0 0 1px #ffffff08; perspective: 2600px; }
+.solution-cube--static { grid-auto-rows: auto; }
+.solution-cube__cell { display: grid; min-width: 0; transform-style: preserve-3d; }
+.solution-cube__cell > *, .solution-cube__face { grid-area: 1 / 1; min-width: 0; }
+.solution-cube__face { display: grid; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+
+.solution-cube__cell[data-turn] .solution-cube__face { animation: .9s cubic-bezier(.65, 0, .35, 1) both; }
+.solution-cube__cell[data-turn="row"] .solution-cube__face--out { animation-name: cube-row-out; }
+.solution-cube__cell[data-turn="row"] .solution-cube__face--in { animation-name: cube-row-in; }
+.solution-cube__cell[data-turn="col"] .solution-cube__face--out { animation-name: cube-col-out; }
+.solution-cube__cell[data-turn="col"] .solution-cube__face--in { animation-name: cube-col-in; }
+@keyframes cube-row-out { to { transform: rotateY(calc(var(--dir) * -90deg)); filter: brightness(.35); } }
+@keyframes cube-row-in { from { transform: rotateY(calc(var(--dir) * 90deg)); filter: brightness(.35); } }
+@keyframes cube-col-out { to { transform: rotateX(calc(var(--dir) * 90deg)); filter: brightness(.35); } }
+@keyframes cube-col-in { from { transform: rotateX(calc(var(--dir) * -90deg)); filter: brightness(.35); } }
+
+/* Compact sticker cards */
+.solution-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; min-width: 0; padding: 16px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; transition: border-color .25s; }
+.solution-card { cursor: pointer; }
+.solution-card:hover, .solution-card:focus-visible { border-color: color-mix(in srgb, var(--brand) 55%, transparent); }
+.solution-card:focus-visible { outline-offset: 0; }
+.solution-card__go { position: absolute; top: 14px; right: 14px; color: var(--brand); opacity: 0; transform: translate(-3px, 3px); transition: opacity .2s, transform .2s; }
+.solution-card:hover .solution-card__go, .solution-card:focus-visible .solution-card__go { opacity: 1; transform: none; }
+.solution-card__icon { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); border-radius: var(--radius); color: var(--brand); background: var(--brand-soft); }
+.solution-card .micro-label { margin: 14px 0 4px; color: var(--brand); font-size: .6875rem; }
+.solution-card h3 { font-size: 1rem; line-height: 1.3; letter-spacing: -.015em; margin-bottom: 6px; }
+.site .solution-cube .solution-card p:not(.micro-label) { font-size: .875rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+@media (max-width: 700px) {
+  .solution-cube { --gap: 6px; border-radius: 10px; }
+  .solution-card { align-items: center; justify-content: center; padding: 12px 8px; text-align: center; min-height: 118px; }
+  .solution-card .micro-label, .site .solution-cube .solution-card p:not(.micro-label) { display: none; }
+  .solution-card h3 { font-size: .8125rem; margin: 10px 0 0; }
+}

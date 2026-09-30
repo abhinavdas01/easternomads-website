@@ -58,8 +58,8 @@ export default function DeliveryJourney({ still }: { still: boolean }) {
   }
   return <section id="process" className="delivery-journey" data-still={still} data-theme-section="process" aria-labelledby="process-title">
     <div className="wrap">
-      <header className="delivery-heading"><div><p className="eyebrow">03 / From possibility to progress</p><h2 id="process-title">You see the work.<br /><span>At every step.</span></h2></div><p>From the first question to life after launch. A shared process, with something tangible at every turn.</p></header>
-      <div className="delivery-tabs" role="tablist" aria-label="Explore our delivery process">{process.map((step, index) => <button type="button" key={step.name} ref={element => { tabs.current[index] = element; }} role="tab" id={`delivery-tab-${index}`} aria-controls={`delivery-panel-${index}`} aria-selected={active === index} tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)} onKeyDown={event => onStageKey(event, index)}><span className="delivery-tabs__number">0{index + 1}</span><span className="delivery-tabs__name">{step.name}</span><span className="delivery-tabs__arrow" aria-hidden="true">↗</span></button>)}</div>
+      <header className="delivery-heading"><div><p className="eyebrow">04 / From possibility to progress</p><h2 id="process-title">You see the work.<br /><span>At every step.</span></h2></div></header>
+      <div className="delivery-tabs" role="tablist" aria-label="Explore our delivery process">{process.map((step, index) => <button type="button" key={step.name} ref={element => { tabs.current[index] = element; }} role="tab" id={`delivery-tab-${index}`} aria-controls={`delivery-panel-${index}`} aria-selected={active === index} tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)} onKeyDown={event => onStageKey(event, index)}><span className="delivery-tabs__number">0{index + 1}</span><span className="delivery-tabs__name">{step.name}</span></button>)}</div>
       <div className="delivery-workbench">
         <DeliveryArtifact active={active} />
         <div className="delivery-copy">{process.map((step, index) => <div key={step.name} className={`delivery-copy__panel ${active === index ? 'is-active' : ''}`} id={`delivery-panel-${index}`} role="tabpanel" aria-labelledby={`delivery-tab-${index}`} aria-hidden={active !== index} inert={active !== index} tabIndex={active === index ? 0 : -1}>
@@ -67,7 +67,7 @@ export default function DeliveryJourney({ still }: { still: boolean }) {
           <dl><div><dt>You receive</dt><dd>{step.output}</dd></div><div><dt>Your part</dt><dd>{step.review}</dd></div></dl>
         </div>)}</div>
       </div>
-      <div className="delivery-foot"><p>Your context shapes the plan. Your feedback shapes the product.</p><button type="button" className="delivery-next" onClick={() => setActive((active + 1) % process.length)} aria-label={`Explore ${process[(active + 1) % process.length].name}`}><span>{active === process.length - 1 ? 'Back to the beginning' : `Next: ${process[active + 1].name}`}</span><span aria-hidden="true">→</span></button></div>
+      <div className="delivery-foot"><p>Your context shapes the plan. Your feedback shapes the product.</p></div>
     </div>
   </section>;
 }
