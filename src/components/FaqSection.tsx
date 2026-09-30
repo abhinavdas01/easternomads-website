@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './faq-section.css';
 import DisclosureCue from './DisclosureCue';
 
@@ -29,9 +30,11 @@ const topics = [
 ];
 
 export default function FaqSection() {
+  // Open by default where there is room; phones start collapsed to keep the page short.
+  const [open] = useState(() => window.matchMedia('(min-width: 901px)').matches);
   return (
     <section id="faq" className="faq-directory wrap" data-theme-section="faq" aria-label="Frequently asked questions">
-      <details className="faq-directory__fold">
+      <details className="faq-directory__fold" id="faq-fold" open={open}>
         <summary className="faq-directory__summary">
           <span className="faq-directory__aside faq-directory__aside--left">A little more clarity</span>
           <h2 className="faq-directory__title">FAQs</h2>

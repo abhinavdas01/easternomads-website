@@ -1,0 +1,21 @@
+/* Tailwind utilities for shadcn-style components in src/components/ui.
+   Preflight (Tailwind's reset) is deliberately not imported, so the existing site styles are unchanged. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Map shadcn token names onto the site's theme tokens (src/theme.css). */
+@theme inline {
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --color-primary: var(--brand);
+  --color-primary-foreground: var(--on-brand);
+  --color-muted: var(--surface);
+  --color-muted-foreground: var(--muted);
+  --color-border: var(--line);
+  --font-sans: var(--font-body);
+  --animate-infinite-scroll: infinite-scroll 40s linear infinite;
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+}

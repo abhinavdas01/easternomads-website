@@ -30,7 +30,6 @@
 .site .contact-form__alternative { flex-wrap: wrap; }
 .site .contact-form__alternative button { text-align: left; }
 .site .optional { font-size: .875rem; }
-.site .story__foot { gap: 24px; }
 .site .contact-inner .eyebrow { max-width: 100%; }
 .site .contact-email { overflow-wrap: anywhere; max-width: 100%; }
 @media (max-width: 960px) {
@@ -50,10 +49,6 @@
   .site .hero__bottom > .micro-label { width: 100%; max-width: none; font-size: .6875rem; }
   .site .hero__bottom { gap: 6px 16px; }
   .site .motion-control, .site .scroll-cue { font-size: .8125rem; }
-  .site .story__foot { flex-wrap: wrap; gap: 14px; }
-  .site .story__foot p { font-size: 1rem; }
-  .site .story__foot a { font-size: 1rem; }
-  .site .story__sticky { height: auto; min-height: 100svh; }
   .site .contact-cta { max-width: 100%; text-align: left; gap: 15px; }
   .site .contact-email { gap: 8px; font-size: 1rem; }
   .site .footer__top p { margin-left: 0; }
@@ -68,8 +63,6 @@
   .nav__cta .arrow { display: none; }
   .site .hero__cta { gap: 15px; }
   .site .hero__cta .round-arrow { width: 44px; height: 44px; }
-  .site .story__line { width: 24px; }
-  .site .story__foot a { margin-left: 38px; }
   .site .contact-email .arrow { display: none; }
 }
 @media (max-height: 700px) and (min-width: 761px) {

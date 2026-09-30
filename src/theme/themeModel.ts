@@ -38,8 +38,9 @@ export const controls: Control[] = [
 ];
 export const scopes = [
   ["global", "Whole website"], ["nav", "Navigation"], ["hero", "Hero"],
-  ["audiences", "Who we help"], ["services", "Services"], ["process", "Process"],
-  ["solutions", "Solutions & stack"], ["team", "Team"], ["about", "About"],
+  ["services", "Services"], ["process", "Process"],
+  ["solutions", "Solutions"], ["saas", "SaaS"],
+  ["apis", "APIs"], ["team", "Team"], ["about", "About"],
   ["faq", "FAQ"], ["contact", "Contact"], ["footer", "Footer"],
 ] as const;
 export type Scope = typeof scopes[number][0];
