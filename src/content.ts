@@ -25,9 +25,11 @@ export const technologies = [
 ];
 
 export const team = [
-  { name: 'Anurag Mishra', role: 'CEO', focus: 'Product & software direction', photo: '/team/anurag', bio: 'Connects business requirements with application design, full-stack development, and practical AI capabilities.' },
-  { name: 'Abhinav Das', role: 'Managing Director', focus: 'Business & client relationships', photo: '/team/abhinav', bio: 'Leads business relationships and engagement coordination, keeping priorities and communication clear throughout a project.' },
-  { name: 'Himanshu Pandey', role: 'CTO', focus: 'Architecture & engineering', photo: '/team/himanshu', bio: 'Guides architecture and engineering across applications, APIs, data, and cloud infrastructure, with maintainability at the center.' },
+  { name: 'Anurag Mishra', role: 'CEO', focus: 'Product & software direction', photo: { key: 'anurag', src: '/team/anurag.jpg', width: 779, height: 908 }, bio: 'Connects business requirements with application design, full-stack development, and practical AI capabilities.' },
+  { name: 'Abhinav Das', role: 'Managing Director', focus: 'Business & client relationships', photo: { key: 'abhinav', src: '/team/abhinav.jpg', width: 640, height: 640 }, bio: 'Leads business relationships and engagement coordination, keeping priorities and communication clear throughout a project.' },
+  { name: 'Himanshu Pandey', role: 'CTO', focus: 'Architecture & engineering', photo: { key: 'himanshu', src: '/team/himanshu.png', width: 629, height: 696 }, bio: 'Guides architecture and engineering across applications, APIs, data, and cloud infrastructure, with maintainability at the center.' },
+  { name: 'Rishi Singh', role: 'Product Lead', focus: 'Product strategy & delivery', photo: { key: 'rishi', src: '/team/rishi.jpg', width: 640, height: 640 }, bio: 'Shapes product direction from discovery to release, turning client goals into clear priorities for design and engineering.' },
+  { name: 'Khushi Nimrani', role: 'Growth Strategist', focus: 'Market research & business growth', photo: { key: 'khushi', src: '/team/khushi.jpg', width: 640, height: 640 }, bio: 'Drives business growth through market research and competitor analysis, finding new opportunities to expand the company’s reach.' },
 ];
 
 export const faqs = [
