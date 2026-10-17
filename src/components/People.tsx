@@ -7,6 +7,7 @@ const portraits = [
   { key: 'anurag', src: '/team/anurag.jpg', width: 779, height: 908 },
   { key: 'abhinav', src: '/team/abhinav.jpg', width: 640, height: 640 },
   { key: 'himanshu', src: '/team/himanshu.png', width: 629, height: 696 },
+  { key: 'rishi', src: '/team/rishi.jpg', width: 640, height: 640 },
   { key: 'khushi', src: '/team/khushi.jpg', width: 640, height: 640 },
 ];
 

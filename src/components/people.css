@@ -10,7 +10,7 @@
 .people-section--portraits .team-fold__label { max-width: 31ch; }
 .people-section--portraits .team-fold .round-arrow { flex: 0 0 46px; width: 46px; height: 46px; }
 .team-portrait-peek { display: flex; gap: 6px; flex-shrink: 0; }
-.team-portrait-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 44px); padding-block: 28px 46px; }
+.team-portrait-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(24px, 3vw, 44px); padding-block: 28px 46px; }
 .team-person { min-width: 0; }
 /* Crisp, natural photographs: no silhouette masks, fades, or blur layers. */
 .team-portrait { position: relative; display: block; width: 100%; max-width: 320px; margin-inline: auto; aspect-ratio: 1; overflow: hidden; background: #191c1a; border-radius: 50%; }
