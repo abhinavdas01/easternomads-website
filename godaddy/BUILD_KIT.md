@@ -115,7 +115,7 @@ React / Next.js · TypeScript · Python · Node.js · Java / Spring Boot · Post
 
 **Title:** Our team  
 **Headline:** Leadership that still ships.  
-**Intro:** A compact founding team spanning AI product, cybersecurity, and full-stack architecture—so strategy and delivery stay in the same conversation.
+**Intro:** A compact team spanning AI product, cybersecurity, full-stack architecture, product, and growth—so strategy and delivery stay in the same conversation.
 
 ### Anurag Mishra — CEO
 **Focus:** AI Engineer & Full-Stack Developer  
@@ -131,6 +131,16 @@ Photo: `team/abhinav.jpg`
 **Focus:** AI & Tech Lead · BITS Pilani  
 Sets technical direction and engineering standards. 7+ years across full-stack delivery—React, Java, Spring Boot, Python, AWS, Gen AI, and API platforms—bridging architecture decisions with hands-on build.  
 Photo: `team/himanshu.png`
+
+### Rishi Singh — Product Lead
+**Focus:** Product strategy & delivery  
+Shapes product direction from discovery to release, turning client goals into clear priorities for design and engineering.  
+Photo: `team/rishi.jpg`
+
+### Khushi Nimrani — Growth Strategist
+**Focus:** Market research & business growth  
+Drives business growth through market research and competitor analysis, finding new opportunities to expand the company’s reach.  
+Photo: `team/khushi.jpg`
 
 ---
 
