@@ -5,8 +5,9 @@ import './people.css';
 
 const portraits = [
   { key: 'anurag', src: '/team/anurag.jpg', width: 779, height: 908 },
-  { key: 'abhinav', src: '/team/abhinav.jpg', width: 275, height: 354 },
+  { key: 'abhinav', src: '/team/abhinav.jpg', width: 640, height: 640 },
   { key: 'himanshu', src: '/team/himanshu.png', width: 629, height: 696 },
+  { key: 'khushi', src: '/team/khushi.jpg', width: 640, height: 640 },
 ];
 
 function Portrait({ index, preview = false }: { index: number; preview?: boolean }) {

@@ -28,6 +28,7 @@ export const team = [
   { name: 'Anurag Mishra', role: 'CEO', focus: 'Product & software direction', photo: '/team/anurag', bio: 'Connects business requirements with application design, full-stack development, and practical AI capabilities.' },
   { name: 'Abhinav Das', role: 'Managing Director', focus: 'Business & client relationships', photo: '/team/abhinav', bio: 'Leads business relationships and engagement coordination, keeping priorities and communication clear throughout a project.' },
   { name: 'Himanshu Pandey', role: 'CTO', focus: 'Architecture & engineering', photo: '/team/himanshu', bio: 'Guides architecture and engineering across applications, APIs, data, and cloud infrastructure, with maintainability at the center.' },
+  { name: 'Khushi Nimrani', role: 'Growth Strategist', focus: 'Market research & business growth', photo: '/team/khushi', bio: 'Leads business growth through market research, competitor analysis, and client relationships, identifying new opportunities and shaping strategies that expand the company’s reach.' },
 ];
 
 export const faqs = [
